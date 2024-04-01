@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MARS SPACE</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 flex justify-center items-center h-screen">
+
+  <div class="bg-white border-[3px] border-orange-500 p-8 rounded-lg shadow-md w-80">
+    <h2 class="text-2xl font-semibold mb-6">Mars Space Login</h2>
+  
+    <form id="login-form">
+      <div class="mb-4">
+        <label for="modmeid" class="block text-gray-700">Modmeid:</label>
+        <input type="text" id="modmeid" name="modmeid" class="border-orange-500 border-[2px] rounded-md w-full py-2 px-3 mt-1 focus:outline-none focus:ring-1 focus:ring-orange-600 focus:border-[3px] focus:border-orange-600">
+      </div>
+      <div class="mb-4">
+        <label for="password" class="block text-gray-700">Password:</label>
+        <input type="password" id="password" name="password" class="border-orange-500 border-[2px] rounded-md w-full py-2 px-3 mt-1 focus:outline-none focus:ring-1 focus:ring-orange-600 focus:border-[3px] focus:border-orange-600">
+      </div>
+      <button type="button" id="login-btn" class="bg-blue-500 text-white py-2 px-4 rounded-md hover:bg-blue-600 focus:outline-none focus:ring focus:border-blue-300">Login</button>
+    </form>
+  
+    <p id="error-msg" class="text-red-500 mt-2 hidden">Invalid ID or password</p>
+  </div>
+  
+  <script>
+    document.getElementById('login-btn').addEventListener('click', function() {
+      var modmeid = document.getElementById('modmeid').value;
+      var password = document.getElementById('password').value;
+      
+      if (modmeid === '546886' && password === '67832') {
+        window.location.href = 'https://space.marsit.uz/homework?group=679&course=10&lesson=0&task=554';
+      } else {
+        document.getElementById('error-msg').classList.remove('hidden');
+      }
+    });
+  </script>
+  
+  </body>
+</html>
